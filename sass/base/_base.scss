@@ -33,6 +33,18 @@ body {
     )
     [center-end] minmax(100px, 1fr) [full-end];
 
+  @include respond(big-desktop) {
+    grid-template-rows:
+      [header-start] 90vh [header-end decision-start] minmax(65vh, max-content)
+      [decision-end home-start ] minmax(75vh, max-content)
+      [home-end slider-start] 75vh
+      [slider-end banner-start] 25vh [banner-end footer-start] minmax(
+        20vh,
+        max-content
+      )
+      [footer-end];
+  }
+
   @include respond(tab-port) {
     grid-template-rows:
       [header-start] 95vh [header-end decision-start] minmax(85vh, max-content)
@@ -73,6 +85,13 @@ body {
     )
     [center-end] minmax(100px, 1fr) [full-end];
 
+  @include respond(big-desktop) {
+    grid-template-rows:
+      [header-start] 95vh [header-end main-start] minmax(100vh, max-content)
+      [main-end footer-start] minmax(20vh, max-content)
+      [footer-end];
+  }
+
   @include respond(phone) {
     grid-template-rows:
       [header-start] 75vh [header-end main-start] minmax(100vh, max-content)
@@ -97,6 +116,13 @@ body {
       [col-start] minmax(min-content, 250px) [col-end]
     )
     [center-end] minmax(100px, 1fr) [full-end];
+
+  @include respond(big-desktop) {
+    grid-template-rows:
+      [header-start] 95vh [header-end main-start] minmax(170vh, max-content)
+      [main-end footer-start] minmax(20vh, max-content)
+      [footer-end];
+  }
 
   @include respond(phone) {
     grid-template-rows:
@@ -124,6 +150,15 @@ body {
       [col-start] minmax(min-content, 250px) [col-end]
     )
     [center-end] minmax(100px, 1fr) [full-end];
+
+  @include respond(big-desktop) {
+    grid-template-rows:
+      [header-start] 95vh [header-end gallery-start] 500vh [gallery-end footer-start] minmax(
+        20vh,
+        max-content
+      )
+      [footer-end];
+  }
 
   @include respond(tab-land) {
     grid-template-rows:

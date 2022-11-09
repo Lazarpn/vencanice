@@ -6,6 +6,10 @@
   grid-template-columns: repeat(8, 420px);
   overflow: hidden;
 
+  @include respond(big-desktop) {
+    grid-template-columns: repeat(8, 650px);
+  }
+
   @include respond(tab-port) {
     grid-template-columns: repeat(8, 350px);
   }

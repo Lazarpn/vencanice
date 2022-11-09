@@ -11,6 +11,10 @@
   height: 70px;
   z-index: 100;
 
+  @include respond(big-desktop) {
+    height: 85px;
+  }
+
   // List styles
 
   &__list {
@@ -28,6 +32,9 @@
     margin-right: 20px;
     font-size: 20px;
     font-weight: 500;
+    @include respond(big-desktop) {
+      font-size: 25px;
+    }
   }
 
   // Link styles

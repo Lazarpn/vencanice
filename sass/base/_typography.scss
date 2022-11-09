@@ -14,6 +14,10 @@ body {
     @include respond(phone) {
       font-size: 50px;
     }
+
+    @include respond(big-desktop) {
+      font-size: 90px;
+    }
   }
   &__2 {
     font-size: 45px;
@@ -22,6 +26,10 @@ body {
     @include respond(phone) {
       font-size: 40px;
     }
+
+    @include respond(big-desktop) {
+      font-size: 55px;
+    }
   }
   &__3 {
     font-size: 30px;
@@ -29,6 +37,10 @@ body {
 
     @include respond(phone) {
       font-size: 25px;
+    }
+
+    @include respond(big-desktop) {
+      font-size: 40px;
     }
   }
 

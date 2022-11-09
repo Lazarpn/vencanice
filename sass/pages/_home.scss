@@ -147,6 +147,10 @@
       @include respond(tab-port) {
         width: 80%;
       }
+
+      @include respond(big-desktop) {
+        font-size: 25px;
+      }
     }
 
     &__heading {
