@@ -745,7 +745,7 @@ body {
     @media only screen and (max-width: 600px) {
       .navigation__icons {
         display: none; } }
-  .navigation__link-icon {
+  .navigation__link-icon:link, .navigation__link-icon:visited {
     all: unset;
     width: 27px;
     height: 27px;
@@ -754,7 +754,11 @@ body {
     height: 100%;
     width: 100%;
     fill: var(--color-gold);
-    cursor: pointer; }
+    cursor: pointer;
+    transition: all 0.2s; }
+  .navigation__icon:hover {
+    fill: var(--color-gold-dark);
+    transform: translateY(-1px); }
 
 .sticky {
   z-index: 50;
@@ -851,6 +855,9 @@ body {
     fill: var(--color-gold);
     transition: fill 0.2s;
     cursor: pointer; }
+  .footer__icon:hover {
+    fill: var(--color-gold-dark);
+    transform: translateY(-1px); }
   .footer__logo {
     width: 130px; }
   .footer__rights {

@@ -76,7 +76,8 @@
     }
   }
 
-  &__link-icon {
+  &__link-icon:link,
+  &__link-icon:visited {
     all: unset;
     width: 27px;
     height: 27px;
@@ -88,6 +89,11 @@
     width: 100%;
     fill: var(--color-gold);
     cursor: pointer;
+    transition: all 0.2s;
+  }
+  &__icon:hover {
+    fill: var(--color-gold-dark);
+    transform: translateY(-1px);
   }
 }
 

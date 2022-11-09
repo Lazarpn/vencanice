@@ -52,6 +52,11 @@
     cursor: pointer;
   }
 
+  &__icon:hover {
+    fill: var(--color-gold-dark);
+    transform: translateY(-1px);
+  }
+
   &__logo {
     width: 130px;
   }
