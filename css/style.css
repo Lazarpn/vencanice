@@ -451,7 +451,7 @@ body {
   .about__image {
     position: absolute;
     width: 400px;
-    height: 300px;
+    height: auto;
     border-radius: 2px;
     transition: all 0.2s;
     z-index: 10;
