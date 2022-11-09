@@ -27,6 +27,7 @@ body {
       grid-template-rows: [header-start] 95vh [header-end decision-start] minmax(85vh, max-content) [decision-end home-start] minmax(100vh, max-content) [home-end slider-start] 50vh [slider-end banner-start] 30vh [banner-end footer-start] minmax(35vh, max-content) [footer-end]; } }
   @media only screen and (max-width: 600px) {
     .container {
+      grid-template-columns: [full-start] minmax(50px, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 20px) [col-end]) [center-end] minmax(50px, 1fr) [full-end];
       grid-template-rows: [header-start] 75vh [header-end decision-start] minmax(85vh, max-content) [decision-end home-start] minmax(100vh, max-content) [home-end slider-start] 75vh [slider-end banner-start] 30vh [banner-end footer-start] minmax(35vh, max-content) [footer-end]; } }
 
 .container-2 {

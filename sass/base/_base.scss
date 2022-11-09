@@ -46,6 +46,12 @@ body {
   }
 
   @include respond(phone) {
+    grid-template-columns:
+      [full-start] minmax(50px, 1fr) [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 20px) [col-end]
+      )
+      [center-end] minmax(50px, 1fr) [full-end];
     grid-template-rows:
       [header-start] 75vh [header-end decision-start] minmax(85vh, max-content)
       [decision-end home-start ] minmax(100vh, max-content)
