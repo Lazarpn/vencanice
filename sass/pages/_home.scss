@@ -105,6 +105,11 @@
           width: 140%;
           grid-column: 4 / 6;
         }
+
+        @include respond(phone) {
+          width: 120%;
+          grid-column: 3 / 6;
+        }
       }
     }
   }
