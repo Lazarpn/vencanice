@@ -28,6 +28,11 @@
     @include respond(tab-port) {
       grid-template-rows: 1fr 2fr;
     }
+
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__text {
@@ -35,6 +40,7 @@
 
     @include respond(phone) {
       padding: 20px 30px 0 30px;
+      margin-bottom: 50px;
     }
 
     &__heading {

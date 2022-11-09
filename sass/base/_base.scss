@@ -37,7 +37,7 @@ body {
     grid-template-rows:
       [header-start] 95vh [header-end decision-start] minmax(85vh, max-content)
       [decision-end home-start ] minmax(100vh, max-content)
-      [home-end slider-start] 50vh
+      [home-end slider-start] minmax(50vh, 80vh)
       [slider-end banner-start] 30vh [banner-end footer-start] minmax(
         35vh,
         max-content
@@ -49,12 +49,14 @@ body {
     grid-template-rows:
       [header-start] 75vh [header-end decision-start] minmax(85vh, max-content)
       [decision-end home-start ] minmax(100vh, max-content)
-      [home-end slider-start] 75vh
+      [home-end slider-start] minmax(50vh, 80vh)
       [slider-end banner-start] 30vh [banner-end footer-start] minmax(
         35vh,
         max-content
       )
       [footer-end];
+
+    grid-template-columns: 1fr;
   }
 }
 // BODY STYLE FOR ABOUT PAGE
@@ -76,6 +78,8 @@ body {
       [header-start] 75vh [header-end main-start] minmax(100vh, max-content)
       [main-end footer-start] minmax(35vh, max-content)
       [footer-end];
+
+    grid-template-columns: 1fr;
   }
 }
 
@@ -99,6 +103,8 @@ body {
       [header-start] 75vh [header-end main-start] minmax(170vh, max-content)
       [main-end footer-start] minmax(35vh, max-content)
       [footer-end];
+
+    grid-template-columns: 1fr;
   }
 }
 
@@ -145,5 +151,7 @@ body {
         max-content
       )
       [footer-end];
+
+    grid-template-columns: 1fr;
   }
 }

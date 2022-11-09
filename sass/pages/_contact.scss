@@ -61,6 +61,10 @@
         height: 40px;
         width: 100%;
 
+        @include respond(phone) {
+          height: 30px;
+        }
+
         &:first-child {
           margin-right: 40px;
         }
@@ -72,11 +76,17 @@
       input {
         height: 40px;
         width: 100%;
+        @include respond(phone) {
+          height: 30px;
+        }
       }
     }
     &--message {
       display: flex;
       height: 400px;
+      @include respond(phone) {
+        height: 300px;
+      }
       textarea {
         width: 100%;
         height: 100%;
@@ -93,10 +103,18 @@
     textarea {
       font-size: 28px;
       padding: 10px 20px;
+
+      @include respond(phone) {
+        font-size: 20px;
+      }
     }
     ::-webkit-input-placeholder {
       font-size: 28px;
       color: rgb(70, 70, 70);
+
+      @include respond(phone) {
+        font-size: 20px;
+      }
     }
   }
 
@@ -109,6 +127,11 @@
 
     @include respond(tab-port) {
       align-self: center;
+    }
+
+    @include respond(phone) {
+      width: 150px;
+      height: 50px;
     }
   }
 }
