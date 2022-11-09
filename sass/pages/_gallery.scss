@@ -1,0 +1,122 @@
+.gallery {
+  grid-row: gallery-start / gallery-end;
+  grid-column: full-start/full-end;
+  display: grid;
+  grid-template-rows: [banner-start] 20vh [banner-end] repeat(
+      17,
+      [row-start] 1fr [row-end]
+    );
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 15px;
+  padding: 15px;
+
+  @include respond(phone) {
+  }
+
+  &__banner {
+    background-color: var(--color-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: banner-start/banner-end;
+    grid-column: 1 / -1;
+  }
+
+  &__heading {
+    color: var(--color-gold);
+  }
+
+  &__img {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s;
+  }
+
+  &__img:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+  }
+
+  &__item {
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  &__item--1 {
+    grid-row: row-start 1 / span 2;
+    grid-column: 1 / span 2;
+  }
+  &__item--2 {
+    grid-row: row-start 1 / span 3;
+    grid-column: 3 / span 3;
+  }
+  &__item--3 {
+    grid-row: row-start 1 / span 3;
+    grid-column: 6 / span 3;
+  }
+  &__item--4 {
+    grid-row: row-start 1 / span 3;
+    grid-column: 9 / -1;
+  }
+  &__item--5 {
+    grid-row: row-start 3 / span 2;
+    grid-column: 1 / span 2;
+  }
+  &__item--6 {
+    grid-row: row-start 4 / span 4;
+    grid-column: 7 / -1;
+  }
+  &__item--7 {
+    grid-row: row-start 4 / span 4;
+    grid-column: 3 / span 4;
+  }
+  &__item--8 {
+    grid-row: row-start 5 / span 3;
+    grid-column: 1 / span 2;
+  }
+  &__item--9 {
+    // REPLACE AN IAMGE
+    grid-row: row-start 8 / span 2;
+    grid-column: 1 / span 5;
+  }
+  &__item--10 {
+    grid-row: row-start 8 / span 2;
+    grid-column: 6 / span 5;
+  }
+  &__item--11 {
+    grid-row: row-start 10 / span 3;
+    grid-column: 1 / span 3;
+  }
+
+  &__item--12 {
+    grid-row: row-start 10 / span 3;
+    grid-column: 4 / span 3;
+  }
+
+  &__item--13 {
+    grid-row: row-start 10 / span 4;
+    grid-column: 7 / -1;
+  }
+
+  &__item--14 {
+    grid-row: row-start 13 / span 3;
+    grid-column: 1 / span 6;
+  }
+
+  &__item--15 {
+    grid-row: row-start 14 / span 2;
+    grid-column: 7 / -1;
+  }
+
+  &__item--16 {
+    grid-row: row-start 16 / span 2;
+    grid-column: 1 / span 5;
+  }
+
+  &__item--17 {
+    grid-row: row-start 16 / span 2;
+    grid-column: 6 / span 5;
+  }
+}

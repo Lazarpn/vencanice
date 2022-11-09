@@ -1,0 +1,13 @@
+.btn-primary {
+  cursor: pointer;
+  background-color: var(--color-gold);
+  color: #fff;
+  border-radius: 30px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  background-color: var(--color-gold-dark);
+}

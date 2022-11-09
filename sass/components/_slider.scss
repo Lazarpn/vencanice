@@ -1,0 +1,65 @@
+@import '../abstracts/mixins';
+
+.slider {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(8, 420px);
+  overflow: hidden;
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(8, 350px);
+  }
+
+  @include respond(phone) {
+    grid-template-columns: repeat(8, 100%);
+  }
+  &__btn {
+    all: unset;
+    position: absolute;
+    top: 50%;
+    // transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: var(--color-white);
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__btn--left {
+    left: 2%;
+    fill: var(--color-gold);
+  }
+
+  &__btn--right {
+    fill: var(--color-gold);
+
+    right: 2%;
+  }
+
+  &__icon {
+    height: 30px;
+    cursor: pointer;
+  }
+}
+
+.slide {
+  transition: all 0.5s;
+  height: 100%;
+  overflow: hidden;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: transform 0.5s, filter 0.5s ease-in-out;
+    transform-origin: center center;
+  }
+
+  &__img:hover {
+    filter: brightness(0.8);
+    transform: scale(1.2);
+  }
+}

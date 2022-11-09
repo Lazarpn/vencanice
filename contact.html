@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Gorgo Vencanice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body class="container-3">
+    <header class="header">
+      <nav class="header__nav navigation">
+        <img src="/images/logo-2.png" class="header__logo" alt="Logo firme" />
+        <svg class="menu-icon hamburger-menu">
+          <use xlink:href="svg/sprite.svg#icon-menu"></use>
+        </svg>
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="index.html" class="navigation__link">Naslovna</a>
+          </li>
+          <li class="navigation__item">
+            <a href="about-us.html" class="navigation__link">O Nama</a>
+          </li>
+          <li class="navigation__item">
+            <a href="gallery.html" class="navigation__link">Galerija</a>
+          </li>
+          <!-- <li class="navigation__item">
+            <a href="#" class="navigation__link">Utisci</a>
+          </li> -->
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--apointment"
+              >Online zakazivanje</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="contact.html" class="navigation__link">Kontakt</a>
+          </li>
+        </ul>
+        <div class="navigation__icons">
+          <a
+            href="https://www.instagram.com/gorgo.vencanice/"
+            class="navigation__link-icon"
+          >
+            <svg class="navigation__icon">
+              <use xlink:href="svg/sprite.svg#icon-instagram"></use>
+            </svg>
+          </a>
+
+          <a
+            class="navigation__link-icon"
+            href="https://www.facebook.com/VencaniceGorgo"
+          >
+            <svg class="navigation__icon">
+              <use xlink:href="svg/sprite.svg#icon-facebook2"></use>
+            </svg>
+          </a>
+          <a class="navigation__link-icon" href="">
+            <svg class="navigation__icon">
+              <use xlink:href="svg/sprite.svg#icon-whatsapp"></use>
+            </svg>
+          </a>
+        </div>
+      </nav>
+      <div class="header__img__box">
+        <img
+          src="/images/contact-pictures/contact.jpg"
+          alt="Slika-1"
+          class="header__img"
+        />
+      </div>
+      <h1 class="header__heading heading__1">Kontaktirajte nas</h1>
+    </header>
+    <main class="contact">
+      <div class="contact__content">
+        <form action="" class="contact__content__form form" id="appointments">
+          <div class="form__box form__box--names">
+            <input type="text" name="name" id="name" placeholder="Ime:" />
+            <input
+              type="text"
+              name="surname"
+              id="surname"
+              placeholder="Prezime:"
+            />
+          </div>
+          <div class="form__box form__box--email">
+            <input type="email" name="email" id="email" placeholder="Email:" />
+          </div>
+          <div class="form__box form__box--message">
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Poruka:"
+            ></textarea>
+          </div>
+          <button class="form__btn btn-primary" type="submit">Posalji</button>
+        </form>
+        <div class="contact__content__informations">
+          <div class="info">
+            <svg class="info__icon">
+              <use xlink:href="svg/sprite.svg#icon-location"></use>
+            </svg>
+            <h4 class="info__heading heading__4">Gorgo Lux</h4>
+            <p>
+              Tržni centar "Piramida" 2.sprat <br />
+              11070 Novi Beograd
+            </p>
+          </div>
+          <div class="info">
+            <svg class="info__icon">
+              <use xlink:href="svg/sprite.svg#icon-phone"></use>
+            </svg>
+            <h4 class="info__heading heading__4"></h4>
+            <p>Tel: +381603474665</p>
+          </div>
+          <div class="info">
+            <svg class="info__icon">
+              <use xlink:href="svg/sprite.svg#icon-mail"></use>
+            </svg>
+            <h4 class="info__heading heading__4"></h4>
+            <p>gorgovencanice@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact__map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d841.6493654352632!2d20.386774601199452!3d44.80200917568831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a6f75072192ed%3A0xf1f83927f703ada3!2sTC%20%22Piramida%22%20-%20Novi%20Beograd!5e0!3m2!1ssr!2srs!4v1667675769284!5m2!1ssr!2srs"
+          width="100%"
+          height="100%"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <nav class="footer__nav">
+        <div class="footer__about">
+          <h3 class="footer__heading heading__3">O nama</h3>
+          <p class="footer__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
+            veritatis ipsa illo magni magnam, quibusdam, nobis sint rem a
+            doloremque ad.
+          </p>
+        </div>
+        <div class="footer__location">
+          <h3 class="footer__heading heading__3">Lokacija</h3>
+          <p class="footer__text">
+            Tržni centar "Piramida" 2.sprat <br />
+            11070 Novi Beograd <br />
+            Tel: +381603474665
+          </p>
+        </div>
+        <div class="footer__work">
+          <h3 class="footer__heading heading__3">Radno vreme</h3>
+          <p class="footer__text">
+            Ponedeljak-Petak: 10h - 20h<br />
+            Subota: 10h - 16h<br />
+            Nedelja: Ne radimo
+          </p>
+        </div>
+
+        <div class="footer__images">
+          <img src="/images/logo.png" alt="Footer logo" class="footer__logo" />
+
+          <div class="footer__icons">
+            <a
+              href="https://www.instagram.com/gorgo.vencanice/"
+              class="footer__link-icon"
+              ><svg class="footer__icon">
+                <use xlink:href="svg/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+            <a
+              href="https://www.facebook.com/VencaniceGorgo"
+              class="footer__link-icon"
+            >
+              <svg class="footer__icon">
+                <use xlink:href="svg/sprite.svg#icon-facebook2"></use>
+              </svg>
+            </a>
+            <a href="" class="footer__link-icon">
+              <svg class="footer__icon">
+                <use xlink:href="svg/sprite.svg#icon-whatsapp"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </nav>
+      <p class="footer__rights">2022 &COPY; Sva prava zadržava Gorgo Lux</p>
+    </footer>
+    <nav class="responsive-menu hidden">
+      <svg class="close-menu">
+        <use xlink:href="svg/sprite.svg#icon-x"></use>
+      </svg>
+      <ul class="responsive-menu__list">
+        <li class="responsive-menu__item">
+          <a href="index.html" class="responsive-menu__link">01 Naslovna</a>
+        </li>
+        <li class="responsive-menu__item">
+          <a href="about-us.html" class="responsive-menu__link">02 O Nama</a>
+        </li>
+        <li class="responsive-menu__item">
+          <a href="gallery.html" class="responsive-menu__link">03 Galerija</a>
+        </li>
+        <!-- <li class="responsive-menu__item">
+          <a href="#" class="responsive-menu__link">Utisci</a>
+        </li> -->
+        <!-- <li class="responsive-menu__item">
+          <a
+            href="contact.html"
+            class="responsive-menu__link responsive-menu__link--apointment"
+            >Online zakazivanje</a
+          >
+        </li> -->
+        <li class="responsive-menu__item">
+          <a href="contact.html" class="responsive-menu__link">04 Kontakt</a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>

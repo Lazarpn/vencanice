@@ -1,0 +1,39 @@
+@import '../abstracts/mixins';
+
+body {
+  font-family: 'Caveat', cursive, 'Times New Roman', Times, serif;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.heading {
+  &__1 {
+    font-size: 70px;
+    font-weight: 400;
+
+    @include respond(phone) {
+      font-size: 50px;
+    }
+  }
+  &__2 {
+    font-size: 45px;
+    font-weight: 500;
+
+    @include respond(phone) {
+      font-size: 40px;
+    }
+  }
+  &__3 {
+    font-size: 30px;
+    font-weight: 400;
+
+    @include respond(phone) {
+      font-size: 25px;
+    }
+  }
+
+  &__4 {
+    font-size: 20px;
+    font-weight: 400;
+  }
+}

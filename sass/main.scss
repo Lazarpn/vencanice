@@ -1,0 +1,22 @@
+// Base imports
+@import 'base/base';
+@import 'base/typography';
+
+// Pages imports
+@import 'pages/home';
+@import 'pages/gallery';
+@import 'pages/about';
+@import 'pages/contact';
+
+// Layout imports
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/footer';
+
+// Abstracts imports
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// Components imports
+@import 'components/slider';
+@import 'components/buttons';
