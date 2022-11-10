@@ -113,8 +113,10 @@ if (modalClose) {
   });
 }
 
-modal.addEventListener('click', function (e) {
-  if (!e.target.classList.contains('modal__img')) {
-    modal.classList.add('hidden');
-  }
-});
+if (modal) {
+  modal.addEventListener('click', function (e) {
+    if (!e.target.classList.contains('modal__img')) {
+      modal.classList.add('hidden');
+    }
+  });
+}

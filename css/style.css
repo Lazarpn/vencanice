@@ -577,7 +577,7 @@ body {
 1800 - Big desktop
 */
 .contact {
-  grid-row-start: main-start/main-end;
+  grid-row: main-start/main-end;
   grid-column: full-start/full-end;
   display: flex;
   flex-direction: column;
@@ -586,6 +586,10 @@ body {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); }
+    @media only screen and (max-width: 600px) {
+      .contact__content {
+        display: flex;
+        flex-direction: column; } }
     .contact__content__form {
       width: 100%; }
     .contact__content__informations {
@@ -624,9 +628,13 @@ body {
       width: 100%; }
       @media only screen and (max-width: 600px) {
         .form__box--names input {
-          height: 30px; } }
+          height: 30px;
+          width: 100%; } }
       .form__box--names input:first-child {
         margin-right: 40px; }
+        @media only screen and (max-width: 600px) {
+          .form__box--names input:first-child {
+            margin-right: 20px; } }
   .form__box--email {
     display: flex; }
     .form__box--email input {
@@ -698,6 +706,20 @@ body {
         text-align: center; } }
     @media only screen and (max-width: 600px) {
       .info p {
+        margin-top: -30px; } }
+  .info a:link,
+  .info a:visited {
+    font-size: 25px;
+    text-decoration: none;
+    color: var(--color-gold);
+    transition: transform 0.2s; }
+    @media only screen and (max-width: 900px) {
+      .info a:link,
+      .info a:visited {
+        text-align: center; } }
+    @media only screen and (max-width: 600px) {
+      .info a:link,
+      .info a:visited {
         margin-top: -30px; } }
 
 /*

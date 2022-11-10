@@ -1,7 +1,7 @@
 @import '../abstracts/mixins';
 
 .contact {
-  grid-row-start: main-start/main-end;
+  grid-row: main-start/main-end;
   grid-column: full-start/full-end;
   display: flex;
   flex-direction: column;
@@ -11,6 +11,11 @@
     display: grid;
     width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column;
+    }
 
     &__form {
       width: 100%;
@@ -67,10 +72,15 @@
 
         @include respond(phone) {
           height: 30px;
+          width: 100%;
         }
 
         &:first-child {
           margin-right: 40px;
+
+          @include respond(phone) {
+            margin-right: 20px;
+          }
         }
       }
     }
@@ -163,6 +173,21 @@
 
   p {
     font-size: 25px;
+
+    @include respond(tab-port) {
+      text-align: center;
+    }
+
+    @include respond(phone) {
+      margin-top: -30px;
+    }
+  }
+  a:link,
+  a:visited {
+    font-size: 25px;
+    text-decoration: none;
+    color: var(--color-gold);
+    transition: transform 0.2s;
 
     @include respond(tab-port) {
       text-align: center;
