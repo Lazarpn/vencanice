@@ -13,6 +13,11 @@ const menuOpen = document.querySelector('.hamburger-menu');
 const menuClose = document.querySelector('.close-menu');
 const decisionBtn = document.querySelector('.decision__content__btn');
 const features = document.getElementById('features');
+// Modal images
+const modal = document.querySelector('.modal');
+const modalImages = document.querySelectorAll('.modal-image');
+const modalImage = document.querySelector('.modal__img');
+const modalClose = document.querySelector('.modal__close');
 let curSlide = 0;
 
 const goToSlide = function (slide) {
@@ -87,5 +92,22 @@ if (menuOpen) {
 if (menuClose) {
   menuClose.addEventListener('click', function (e) {
     menu.classList.add('hidden');
+  });
+}
+
+// MODAL IMAGE
+
+let imgSrc;
+modalImages.forEach(img => {
+  img.addEventListener('click', function (e) {
+    imgSrc = e.target.getAttribute('src');
+    modal.classList.remove('hidden');
+    modalImage.setAttribute('src', imgSrc);
+  });
+});
+
+if (modalClose) {
+  modalClose.addEventListener('click', function (e) {
+    modal.classList.add('hidden');
   });
 }

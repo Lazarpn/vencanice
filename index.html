@@ -231,7 +231,7 @@
           loading="lazy"
           src="images/slider-pictures/slider-picture-1.webp"
           alt="Slika 1"
-          class="slide__img"
+          class="slide__img modal-image"
         />
       </div>
 
@@ -240,7 +240,7 @@
           loading="lazy"
           src="images/slider-pictures/slider-picture-8.webp"
           alt="Slika 2"
-          class="slide__img"
+          class="slide__img modal-image"
         />
       </div>
 
@@ -249,7 +249,7 @@
           loading="lazy"
           src="images/slider-pictures/slider-picture-4.webp"
           alt="Slika 2"
-          class="slide__img"
+          class="slide__img modal-image"
         />
       </div>
 
@@ -258,7 +258,7 @@
           loading="lazy"
           src="images/slider-pictures/slider-picture-6.webp"
           alt="Slika 2"
-          class="slide__img"
+          class="slide__img modal-image"
         />
       </div>
       <div class="slide">
@@ -266,7 +266,7 @@
           loading="lazy"
           src="images/slider-pictures/slider-picture-3.webp"
           alt="Slika 3"
-          class="slide__img"
+          class="slide__img modal-image"
         />
       </div>
 
@@ -275,7 +275,7 @@
           loading="lazy"
           src="images/slider-pictures/slider-picture-7.webp"
           alt="Slika 2"
-          class="slide__img"
+          class="slide__img modal-image"
         />
       </div>
 
@@ -284,7 +284,7 @@
           loading="lazy"
           src="images/slider-pictures/slider-picture-5.webp"
           alt="Slika 3"
-          class="slide__img"
+          class="slide__img modal-image"
         />
       </div>
       <div class="slide">
@@ -292,7 +292,7 @@
           loading="lazy"
           src="images/slider-pictures/slider-picture-2.webp"
           alt="Slika 2"
-          class="slide__img"
+          class="slide__img modal-image"
         />
       </div>
       <button title="Slide left" class="slider__btn slider__btn--left">
@@ -388,6 +388,7 @@
       </nav>
       <p class="footer__rights">2022 &COPY; Sva prava zadržava Gorgo Lux</p>
     </footer>
+    <!-- RESPONSIVE MENU  -->
     <nav class="responsive-menu hidden">
       <svg class="close-menu">
         <use xlink:href="svg/sprite.svg#icon-x"></use>
@@ -441,5 +442,12 @@
         </li>
       </ul>
     </nav>
+    <!-- MODAL IMAGE -->
+    <div class="modal hidden">
+      <svg class="modal__close">
+        <use xlink:href="svg/sprite.svg#icon-x"></use>
+      </svg>
+      <img alt="Modal Picture" class="modal__img" />
+    </div>
   </body>
 </html>
