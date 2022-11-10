@@ -29,6 +29,10 @@
   &__map {
     height: 35%;
 
+    @include respond(big-desktop) {
+      height: 40%;
+    }
+
     @include respond(tab-port) {
       margin-top: 30px;
     }

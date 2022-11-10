@@ -87,7 +87,7 @@ body {
 
   @include respond(big-desktop) {
     grid-template-rows:
-      [header-start] 95vh [header-end main-start] minmax(100vh, max-content)
+      [header-start] 95vh [header-end main-start] minmax(80vh, max-content)
       [main-end footer-start] minmax(20vh, max-content)
       [footer-end];
   }
@@ -119,7 +119,7 @@ body {
 
   @include respond(big-desktop) {
     grid-template-rows:
-      [header-start] 95vh [header-end main-start] minmax(170vh, max-content)
+      [header-start] 95vh [header-end main-start] minmax(110vh, max-content)
       [main-end footer-start] minmax(20vh, max-content)
       [footer-end];
   }
