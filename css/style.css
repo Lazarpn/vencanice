@@ -470,12 +470,18 @@ body {
       @media only screen and (min-width: 1800px) {
         .about__text__text {
           font-size: 25px; } }
-    .about__text__btn {
-      all: unset;
-      margin-top: 50px;
+    .about__text__btn:link, .about__text__btn:visited {
+      display: block;
+      text-decoration: none;
+      padding: 10px;
+      margin-top: 40px;
       font-size: 22px;
       width: 170px;
-      height: 50px; }
+      height: 50px;
+      transition: all 0.2s; }
+    .about__text__btn:hover, .about__text__btn:active {
+      background-color: var(--color-gold-dark);
+      transform: translateY(-2px); }
   .about__images {
     position: relative; }
     @media only screen and (max-width: 900px) {
