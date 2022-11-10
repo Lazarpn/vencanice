@@ -11,7 +11,8 @@ const appointmetsSection = document.getElementById('appointments');
 const menu = document.querySelector('.responsive-menu');
 const menuOpen = document.querySelector('.hamburger-menu');
 const menuClose = document.querySelector('.close-menu');
-
+const decisionBtn = document.querySelector('.decision__content__btn');
+const features = document.getElementById('features');
 let curSlide = 0;
 
 const goToSlide = function (slide) {
@@ -66,6 +67,12 @@ headerObs.observe(header);
 linkAppointment.addEventListener('click', function (e) {
   appointmetsSection.scrollIntoView({ behavior: 'smooth' });
 });
+
+if (decisionBtn) {
+  decisionBtn.addEventListener('click', function () {
+    features.scrollIntoView({ behavior: 'smooth' });
+  });
+}
 
 //
 
