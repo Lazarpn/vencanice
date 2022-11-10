@@ -26,10 +26,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    @include respond(big-desktop) {
-      width: 1300px;
-    }
-
     @include respond(tab-land) {
       width: 800px;
     }
