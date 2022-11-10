@@ -18,6 +18,7 @@ const modal = document.querySelector('.modal');
 const modalImages = document.querySelectorAll('.modal-image');
 const modalImage = document.querySelector('.modal__img');
 const modalClose = document.querySelector('.modal__close');
+const overlay = document.querySelector('.overlay');
 let curSlide = 0;
 
 const goToSlide = function (slide) {
@@ -111,3 +112,9 @@ if (modalClose) {
     modal.classList.add('hidden');
   });
 }
+
+modal.addEventListener('click', function (e) {
+  if (!e.target.classList.contains('modal__img')) {
+    modal.classList.add('hidden');
+  }
+});
