@@ -1,12 +1,7 @@
-# Ignoring css files
-*.comp.css
-*.concat.css
-*.prefix.css
-# Ignoring sass
-sass/
-# Ignoring node_modules
-node_modules/
-# Ignoring
+*.comp.css,
+*.concat.css,
+*.prefix.css,
+sass/,
+node_modules/,
 [package-lock.json, package.json]
 
-# Ignoring
