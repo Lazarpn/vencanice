@@ -48,10 +48,10 @@
 
   &__text {
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
 
     @include respond(big-desktop) {
-      font-size: 24px;
+      font-size: 21px;
     }
   }
 }
@@ -154,7 +154,7 @@
     }
 
     &__text {
-      font-size: 20px;
+      font-size: 18px;
 
       @include respond(tab-port) {
         width: 80%;

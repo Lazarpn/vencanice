@@ -8,31 +8,31 @@ body {
 
 .heading {
   &__1 {
-    font-size: 60px;
+    font-size: 55px;
     font-weight: 400;
 
     @include respond(phone) {
-      font-size: 45px;
+      font-size: 40px;
     }
 
     @include respond(big-desktop) {
-      font-size: 85px;
+      font-size: 75px;
     }
   }
   &__2 {
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 500;
 
     @include respond(phone) {
-      font-size: 35px;
+      font-size: 30px;
     }
 
     @include respond(big-desktop) {
-      font-size: 50px;
+      font-size: 45px;
     }
   }
   &__3 {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
 
     @include respond(phone) {
@@ -40,7 +40,7 @@ body {
     }
 
     @include respond(big-desktop) {
-      font-size: 35px;
+      font-size: 30px;
     }
   }
 

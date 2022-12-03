@@ -30,10 +30,10 @@
 
   &__item {
     margin-right: 20px;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 500;
     @include respond(big-desktop) {
-      font-size: 25px;
+      font-size: 21px;
     }
   }
 
@@ -167,7 +167,7 @@
   &__link:visited {
     text-decoration: none;
     display: inline-block;
-    font-size: 30px;
+    font-size: 25px;
     text-transform: uppercase;
     color: var(--color-gold);
     transition: all 0.4s;

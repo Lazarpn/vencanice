@@ -56,10 +56,10 @@
 
     &__text {
       margin-top: 25px;
-      font-size: 18px;
+      font-size: 17px;
 
       @include respond(big-desktop) {
-        font-size: 20px;
+        font-size: 19px;
       }
     }
 
