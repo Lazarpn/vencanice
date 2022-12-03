@@ -37,7 +37,7 @@ body {
     grid-template-rows:
       [header-start] 90vh [header-end decision-start] minmax(65vh, max-content)
       [decision-end home-start ] minmax(75vh, max-content)
-      [home-end slider-start] 75vh
+      [home-end slider-start] 85vh
       [slider-end banner-start] 25vh [banner-end footer-start] minmax(
         20vh,
         max-content
@@ -61,7 +61,7 @@ body {
     grid-template-rows:
       [header-start] 75vh [header-end decision-start] minmax(85vh, max-content)
       [decision-end home-start ] minmax(100vh, max-content)
-      [home-end slider-start] 60vh
+      [home-end slider-start] minmax(70vh, max-content)
       [slider-end banner-start] 30vh [banner-end footer-start] minmax(
         35vh,
         max-content

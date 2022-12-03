@@ -115,19 +115,19 @@
 
     input,
     textarea {
-      font-size: 28px;
+      font-size: 23px;
       padding: 10px 20px;
 
       @include respond(phone) {
-        font-size: 20px;
+        font-size: 16px;
       }
     }
     ::-webkit-input-placeholder {
-      font-size: 28px;
+      font-size: 23px;
       color: rgb(70, 70, 70);
 
       @include respond(phone) {
-        font-size: 20px;
+        font-size: 16px;
       }
     }
   }
@@ -136,7 +136,7 @@
     all: unset;
     width: 220px;
     height: 60px;
-    font-size: 30px;
+    font-size: 25px;
     margin-top: 50px;
 
     @include respond(tab-port) {
@@ -159,7 +159,7 @@
     align-items: center;
   }
   &__heading {
-    font-size: 30px;
+    font-size: 25px;
     @include respond(phone) {
       margin-top: -30px;
       margin-bottom: 30px;
@@ -172,7 +172,7 @@
   }
 
   p {
-    font-size: 25px;
+    font-size: 20px;
 
     @include respond(tab-port) {
       text-align: center;
@@ -184,7 +184,7 @@
   }
   a:link,
   a:visited {
-    font-size: 25px;
+    font-size: 20px;
     text-decoration: none;
     color: var(--color-gold);
     transition: transform 0.2s;

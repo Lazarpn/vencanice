@@ -3,7 +3,7 @@
 .slider {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(8, 420px);
+  grid-template-columns: repeat(8, 360px);
   overflow: hidden;
 
   @include respond(big-desktop) {
@@ -72,7 +72,14 @@
   }
 
   &__img:hover {
-    filter: brightness(0.8);
-    transform: scale(1.2);
+    @include respond(desktop) {
+      filter: brightness(0.8);
+      transform: scale(1.2);
+    }
+
+    @include respond(big-desktop) {
+      filter: brightness(0.8);
+      transform: scale(1.2);
+    }
   }
 }

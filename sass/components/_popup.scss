@@ -20,19 +20,20 @@
   }
 
   &__img {
-    width: 900px;
+    // width: 900px;
+    height: 90vh;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    @include respond(tab-land) {
-      width: 800px;
-    }
+    // @include respond(tab-land) {
+    //   width: 800px;
+    // }
 
-    @include respond(tab-port) {
-      width: 550px;
-    }
+    // @include respond(tab-port) {
+    //   width: 550px;
+    // }
 
     @include respond(phone) {
       width: 300px;

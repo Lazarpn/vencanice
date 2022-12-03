@@ -48,7 +48,7 @@
     }
 
     &__heading {
-      font-size: 28px;
+      font-size: 23px;
       color: var(--color-gold);
       text-transform: uppercase;
       margin-top: 40px;
@@ -56,10 +56,10 @@
 
     &__text {
       margin-top: 25px;
-      font-size: 22px;
+      font-size: 18px;
 
       @include respond(big-desktop) {
-        font-size: 25px;
+        font-size: 20px;
       }
     }
 
@@ -70,7 +70,7 @@
       text-decoration: none;
       padding: 10px;
       margin-top: 40px;
-      font-size: 22px;
+      font-size: 18px;
       width: 170px;
       height: 50px;
       transition: all 0.2s;
