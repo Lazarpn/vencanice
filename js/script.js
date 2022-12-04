@@ -94,13 +94,16 @@ if (menuClose) {
 // MODAL IMAGE
 
 let imgSrc;
-modalImages.forEach(img => {
-  img.addEventListener('click', function (e) {
-    imgSrc = e.target.getAttribute('src');
-    modal.classList.remove('hidden');
-    modalImage.setAttribute('src', imgSrc);
+
+if (modalImages) {
+  modalImages.forEach(img => {
+    img.addEventListener('click', function (e) {
+      imgSrc = e.target.getAttribute('src');
+      modal.classList.remove('hidden');
+      modalImage.setAttribute('src', imgSrc);
+    });
   });
-});
+}
 
 if (modalClose) {
   modalClose.addEventListener('click', function (e) {
