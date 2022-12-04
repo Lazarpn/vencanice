@@ -1069,4 +1069,5 @@ body {
     transform: translate(-50%, -50%); }
     @media only screen and (max-width: 600px) {
       .modal__img {
-        width: 300px; } }
+        width: 90vw;
+        height: auto; } }

@@ -36,7 +36,9 @@
     // }
 
     @include respond(phone) {
-      width: 300px;
+      // width: 300px;
+      width: 90vw;
+      height: auto;
     }
   }
 }
