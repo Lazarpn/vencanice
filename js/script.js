@@ -6,7 +6,6 @@ const btnSliderRight = document.querySelector('.slider__btn--right');
 const slides = document.querySelectorAll('.slide');
 const navigation = document.querySelector('.navigation');
 const header = document.querySelector('.header');
-const linkAppointment = document.querySelector('.navigation__link--apointment');
 const appointmetsSection = document.getElementById('appointments');
 const menu = document.querySelector('.responsive-menu');
 const menuOpen = document.querySelector('.hamburger-menu');
@@ -69,10 +68,6 @@ const headerObs = new IntersectionObserver(addStickyHeader, options);
 headerObs.observe(header);
 
 // SMOOTH SCROLLING
-
-linkAppointment.addEventListener('click', function (e) {
-  appointmetsSection.scrollIntoView({ behavior: 'smooth' });
-});
 
 if (decisionBtn) {
   decisionBtn.addEventListener('click', function () {
