@@ -280,7 +280,7 @@ body {
     text-decoration: none;
     color: var(--color-gold);
     border-bottom: 2px solid var(--color-gold); }
-  .banner__link:hover, .banner__active {
+  .banner__link:hover, .banner__link:active {
     cursor: pointer; }
 
 .gallery {
