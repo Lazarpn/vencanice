@@ -177,7 +177,7 @@ body {
   @include respond(phone) {
     // HEIGHT MUST BE FIXED
     grid-template-rows:
-      [header-start] 75vh [header-end gallery-start] 870vh [gallery-end footer-start] minmax(
+      [header-start] 75vh [header-end gallery-start] 880vh [gallery-end footer-start] minmax(
         35vh,
         max-content
       )
