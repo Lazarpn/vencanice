@@ -78,7 +78,6 @@
   }
   &__images {
     display: grid;
-    grid-column: 1/2;
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(6, 1fr);
     align-items: center;
@@ -141,8 +140,6 @@
 
   &__content {
     background-color: var(--color-grey);
-    grid-column: 2/-1;
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -179,7 +176,7 @@
       }
 
       @include respond(big-desktop) {
-        font-size: 25px;
+        font-size: 22px;
       }
     }
 

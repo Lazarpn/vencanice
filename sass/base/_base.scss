@@ -31,7 +31,7 @@ body {
 
   @include respond(big-desktop) {
     grid-template-rows:
-      [header-start] 90vh [header-end decision-start] minmax(65vh, 75vh)
+      [header-start] 90vh [header-end decision-start] minmax(65vh, max-content)
       [decision-end home-start ] minmax(75vh, max-content)
       [home-end slider-start] 55vh
       [slider-end banner-start] 25vh [banner-end footer-start] minmax(
