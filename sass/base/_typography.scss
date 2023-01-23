@@ -16,7 +16,7 @@ body {
     }
 
     @include respond(big-desktop) {
-      font-size: 75px;
+      font-size: 65px;
     }
   }
   &__2 {
@@ -24,7 +24,7 @@ body {
     font-weight: 500;
 
     @include respond(phone) {
-      font-size: 30px;
+      font-size: 27px;
     }
 
     @include respond(big-desktop) {

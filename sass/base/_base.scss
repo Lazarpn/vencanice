@@ -31,9 +31,9 @@ body {
 
   @include respond(big-desktop) {
     grid-template-rows:
-      [header-start] 90vh [header-end decision-start] minmax(65vh, max-content)
+      [header-start] 90vh [header-end decision-start] minmax(65vh, 75vh)
       [decision-end home-start ] minmax(75vh, max-content)
-      [home-end slider-start] 85vh
+      [home-end slider-start] 55vh
       [slider-end banner-start] 25vh [banner-end footer-start] minmax(
         20vh,
         max-content
@@ -177,7 +177,7 @@ body {
   @include respond(phone) {
     // HEIGHT MUST BE FIXED
     grid-template-rows:
-      [header-start] 75vh [header-end gallery-start] 380vh [gallery-end footer-start] minmax(
+      [header-start] 75vh [header-end gallery-start] 870vh [gallery-end footer-start] minmax(
         35vh,
         max-content
       )

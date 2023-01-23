@@ -193,6 +193,13 @@
     }
   }
 
+  @include respond(tab-land) {
+    &__image:hover {
+      transform: none;
+      outline: none;
+    }
+  }
+
   &:hover &__photo:not(:hover) {
     transform: scale(0.95);
   }
