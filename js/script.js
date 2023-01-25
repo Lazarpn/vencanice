@@ -143,12 +143,18 @@ const sendData = function (name, surname, email, phone, message) {
       'Content-type': 'application/json; charset=UTF-8',
     },
   }).then(function (response) {
-    console.log(response);
+    nameInput.value = '';
+    surnameInput.value = '';
+    phoneNumberInput.value = '';
+    emailInput.value = '';
+    messageInput.value = '';
+    // Display message based on promise
   });
 };
 
 if (btnSend) {
   btnSend.addEventListener('click', function (e) {
+    e.preventDefault();
     const name = nameInput.value;
     const surname = surnameInput.value;
     const email = emailInput.value;
