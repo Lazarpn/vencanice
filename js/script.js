@@ -149,7 +149,6 @@ const sendData = function (name, surname, email, phone, message) {
 
 if (btnSend) {
   btnSend.addEventListener('click', function (e) {
-    e.preventDefault();
     const name = nameInput.value;
     const surname = surnameInput.value;
     const email = emailInput.value;
