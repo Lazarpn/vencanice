@@ -45,15 +45,10 @@
     }
   }
 
-  &__img:hover {
-    transform: scale(1.1);
-    filter: brightness(0.8);
-  }
-
-  @include respond(phone) {
+  @include respond(desktop) {
     &__img:hover {
-      transform: none;
-      filter: none;
+      transform: scale(1.1);
+      filter: brightness(0.8);
     }
   }
 
