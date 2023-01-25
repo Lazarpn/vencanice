@@ -18,6 +18,14 @@ const modalImages = document.querySelectorAll('.modal-image');
 const modalImage = document.querySelector('.modal__img');
 const modalClose = document.querySelector('.modal__close');
 const overlay = document.querySelector('.overlay');
+// Contact form
+const nameInput = document.getElementById('name');
+const surnameInput = document.getElementById('surname');
+const emailInput = document.getElementById('email');
+const phoneNumberInput = document.getElementById('phone');
+const messageInput = document.getElementById('message');
+const btnSend = document.getElementById('buttonSend');
+
 let curSlide = 0;
 
 const goToSlide = function (slide) {
@@ -116,5 +124,44 @@ if (modal) {
     if (!e.target.classList.contains('modal__img')) {
       modal.classList.add('hidden');
     }
+  });
+}
+
+// Contact form
+
+const sendData = function (name, surname, email, phone, message) {
+  fetch(`https://gorgo-lux-default-rtdb.firebaseio.com/message.json`, {
+    method: 'POST',
+    body: JSON.stringify({
+      name: name,
+      surname: surname,
+      email: email,
+      phone: phone,
+      message: message,
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  }).then(function (response) {
+    console.log(response);
+  });
+};
+
+if (btnSend) {
+  btnSend.addEventListener('click', function (e) {
+    e.preventDefault();
+    const name = nameInput.value;
+    const surname = surnameInput.value;
+    const email = emailInput.value;
+    const phoneNumber = phoneNumberInput.value;
+    const message = messageInput.value;
+
+    // if (name === '' || surname === '' || phoneNumber === '' || message || '') {
+    //   return;
+    // }
+
+    // console.log(name, surname, email, phoneNumber, message);
+
+    sendData(name, surname, email, phoneNumber, message);
   });
 }

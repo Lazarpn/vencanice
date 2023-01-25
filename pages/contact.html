@@ -143,25 +143,44 @@
       <div class="contact__content">
         <form action="" class="contact__content__form form" id="appointments">
           <div class="form__box form__box--names">
-            <input type="text" name="name" id="name" placeholder="Ime:" />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Ime:"
+              required
+            />
             <input
               type="text"
               name="surname"
               id="surname"
               placeholder="Prezime:"
+              required
             />
           </div>
           <div class="form__box form__box--email">
             <input type="email" name="email" id="email" placeholder="Email:" />
+          </div>
+          <div class="form__box form__box--email">
+            <input
+              type="phone"
+              name="phone"
+              id="phone"
+              placeholder="Telefon:"
+              required
+            />
           </div>
           <div class="form__box form__box--message">
             <textarea
               name="message"
               id="message"
               placeholder="Poruka:"
+              required
             ></textarea>
           </div>
-          <button class="form__btn btn-primary" type="submit">Pošalji</button>
+          <button class="form__btn btn-primary" id="buttonSend" type="submit">
+            Pošalji
+          </button>
         </form>
         <div class="contact__content__informations">
           <div class="info">
