@@ -314,6 +314,10 @@ body {
   .gallery__img:hover {
     transform: scale(1.1);
     filter: brightness(0.8); }
+  @media only screen and (max-width: 600px) {
+    .gallery__img:hover {
+      transform: none;
+      filter: none; } }
   .gallery__item {
     object-fit: cover;
     overflow: hidden; }

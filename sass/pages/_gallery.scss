@@ -50,6 +50,13 @@
     filter: brightness(0.8);
   }
 
+  @include respond(phone) {
+    &__img:hover {
+      transform: none;
+      filter: none;
+    }
+  }
+
   &__item {
     object-fit: cover;
     overflow: hidden;
