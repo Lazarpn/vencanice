@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
 <url>
-  <loc>https://vencanicegorgo.com/index.html</loc>
+  <loc>https://www.vencanicegorgo.com/</loc>
 </url>
 <url>
   <loc>https://vencanicegorgo.com/pages/about-us.html</loc>
@@ -12,19 +12,5 @@
 <url>
   <loc>https://vencanicegorgo.com/pages/contact.html</loc>
 </url>
-<url>
-  <loc>https://vencanicegorgo.com/tel:0603474665</loc>
-</url>
-<url>
-  <loc>https://vencanicegorgo.com/tel:+381603474665</loc>
-</url>
-<url>
-  <loc>https://vencanicegorgo.com/about-us.html</loc>
-</url>
-<url>
-  <loc>https://vencanicegorgo.com/gallery.html</loc>
-</url>
-<url>
-  <loc>https://vencanicegorgo.com/contact.html</loc>
-</url>
+
 </urlset>
