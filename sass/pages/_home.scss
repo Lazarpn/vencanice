@@ -266,6 +266,9 @@
 // BANNER STYLES
 
 .banner {
+  display: flex;
+  flex-direction: column;
+
   background-color: var(--color-grey);
   grid-row: banner-start / banner-end;
   grid-column: full-start / full-end;

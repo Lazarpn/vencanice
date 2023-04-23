@@ -7,7 +7,7 @@
       [row-start] 1fr [row-end]
     );
   grid-template-columns: repeat(10, 1fr);
-  grid-gap: 15px;
+  grid-gap: 3px;
   padding: 25px;
 
   @include respond(phone) {
@@ -23,6 +23,7 @@
   &__banner {
     background-color: var(--color-grey);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     grid-row: banner-start/banner-end;

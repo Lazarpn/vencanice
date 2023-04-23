@@ -310,6 +310,8 @@ body {
       font-size: 23px; }
 
 .banner {
+  display: flex;
+  flex-direction: column;
   background-color: var(--color-grey);
   grid-row: banner-start / banner-end;
   grid-column: full-start / full-end;
@@ -334,7 +336,7 @@ body {
   display: grid;
   grid-template-rows: [banner-start] 20vh [banner-end] repeat(17, [row-start] 1fr [row-end]);
   grid-template-columns: repeat(10, 1fr);
-  grid-gap: 15px;
+  grid-gap: 3px;
   padding: 25px; }
   @media only screen and (max-width: 600px) {
     .gallery {
@@ -343,6 +345,7 @@ body {
   .gallery__banner {
     background-color: var(--color-grey);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     grid-row: banner-start/banner-end;
@@ -789,7 +792,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
+  height: 85px;
   z-index: 100; }
   @media only screen and (min-width: 1800px) {
     .navigation {
