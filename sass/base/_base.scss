@@ -11,12 +11,13 @@ body {
   box-sizing: border-box;
 }
 
+// STYLE FOR LANDING PAGE
 .container {
   display: grid;
   grid-template-rows:
     [header-start] 95vh [header-end decision-start] minmax(85vh, max-content)
-    [decision-end home-start ] minmax(100vh, max-content)
-    [home-end slider-start] 70vh
+    [decision-end home-start] minmax(80vh, max-content)
+    [home-end slider-start] minmax(85vh, max-content)
     [slider-end banner-start] 30vh [banner-end footer-start] minmax(
       35vh,
       max-content
@@ -32,8 +33,8 @@ body {
   @include respond(big-desktop) {
     grid-template-rows:
       [header-start] 90vh [header-end decision-start] minmax(65vh, max-content)
-      [decision-end home-start ] minmax(75vh, max-content)
-      [home-end slider-start] 55vh
+      [decision-end home-start] minmax(75vh, max-content)
+      [home-end slider-start] minmax(55vh, max-content)
       [slider-end banner-start] 25vh [banner-end footer-start] minmax(
         20vh,
         max-content
@@ -44,8 +45,8 @@ body {
   @include respond(tab-port) {
     grid-template-rows:
       [header-start] 95vh [header-end decision-start] minmax(85vh, max-content)
-      [decision-end home-start ] minmax(100vh, max-content)
-      [home-end slider-start] 70vh
+      [decision-end home-start] minmax(100vh, max-content)
+      [home-end slider-start] minmax(80vh, max-content)
       [slider-end banner-start] 30vh [banner-end footer-start] minmax(
         35vh,
         max-content
@@ -56,7 +57,7 @@ body {
   @include respond(phone) {
     grid-template-rows:
       [header-start] 75vh [header-end decision-start] minmax(85vh, max-content)
-      [decision-end home-start ] minmax(100vh, max-content)
+      [decision-end home-start] minmax(100vh, max-content)
       [home-end slider-start] minmax(70vh, max-content)
       [slider-end banner-start] 30vh [banner-end footer-start] minmax(
         35vh,
