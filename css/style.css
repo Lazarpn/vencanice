@@ -17,11 +17,11 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: [header-start] 95vh [header-end decision-start] minmax(85vh, max-content) [decision-end home-start] minmax(80vh, max-content) [home-end slider-start] minmax(85vh, max-content) [slider-end banner-start] 30vh [banner-end footer-start] minmax(35vh, max-content) [footer-end];
+  grid-template-rows: [header-start] 95vh [header-end decision-start] minmax(85vh, max-content) [decision-end home-start] minmax(40vh, max-content) [home-end slider-start] minmax(85vh, max-content) [slider-end banner-start] 30vh [banner-end footer-start] minmax(35vh, max-content) [footer-end];
   grid-template-columns: [full-start] minmax(100px, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 250px) [col-end]) [center-end] minmax(100px, 1fr) [full-end]; }
   @media only screen and (min-width: 1800px) {
     .container {
-      grid-template-rows: [header-start] 90vh [header-end decision-start] minmax(65vh, max-content) [decision-end home-start] minmax(75vh, max-content) [home-end slider-start] minmax(55vh, max-content) [slider-end banner-start] 25vh [banner-end footer-start] minmax(20vh, max-content) [footer-end]; } }
+      grid-template-rows: [header-start] 90vh [header-end decision-start] minmax(65vh, max-content) [decision-end home-start] minmax(30vh, max-content) [home-end slider-start] minmax(55vh, max-content) [slider-end banner-start] 25vh [banner-end footer-start] minmax(20vh, max-content) [footer-end]; } }
   @media only screen and (max-width: 900px) {
     .container {
       grid-template-rows: [header-start] 95vh [header-end decision-start] minmax(85vh, max-content) [decision-end home-start] minmax(100vh, max-content) [home-end slider-start] minmax(80vh, max-content) [slider-end banner-start] 30vh [banner-end footer-start] minmax(35vh, max-content) [footer-end]; } }
@@ -137,9 +137,7 @@ body {
   justify-items: center; }
   .home__features {
     grid-row: 2/3;
-    grid-column: 1/2;
-    padding: 15px;
-    padding-bottom: 30px;
+    grid-column: 1/-1;
     width: 100%;
     height: 100%;
     display: grid;
@@ -159,6 +157,7 @@ body {
     grid-column: 1 / -1; }
 
 .home-gallery {
+  margin-top: 50px;
   grid-row: slider-start/slider-end;
   grid-column: full-start/full-end;
   display: flex;
@@ -168,7 +167,7 @@ body {
     margin-top: 1.5rem;
     width: 100%;
     height: 100%;
-    padding: 0 4rem; }
+    padding: 0 12rem; }
     @media only screen and (max-width: 1200px) {
       .home-gallery__gallery {
         padding: 0 2rem; } }
@@ -176,8 +175,8 @@ body {
       width: 100%;
       height: 100%;
       display: grid;
-      column-gap: 100px;
-      grid-template-columns: repeat(auto-fit, minmax(250px, max-content)); }
+      column-gap: 50px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, max-content)); }
     @media only screen and (max-width: 1200px) {
       .home-gallery__gallery__content {
         column-gap: 50px; } }
@@ -356,7 +355,7 @@ body {
     display: block;
     cursor: pointer;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     transition: all 0.2s; }
     @media only screen and (max-width: 600px) {
       .gallery__img {
@@ -611,7 +610,7 @@ body {
         .contact__content__informations {
           align-items: center; } }
   .contact__map {
-    height: 35%; }
+    height: 45%; }
     @media only screen and (min-width: 1800px) {
       .contact__map {
         height: 40%; } }
@@ -761,13 +760,14 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top;
+    object-position: center;
     filter: brightness(0.5); }
   .header__heading {
     position: absolute;
     color: var(--color-white);
-    bottom: 10%;
-    left: 5%; }
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
   .header__heading::after {
     content: '';
     display: block;
@@ -1087,5 +1087,5 @@ body {
     transform: translate(-50%, -50%); }
     @media only screen and (max-width: 600px) {
       .modal__img {
-        width: 90vw;
+        width: 75vw;
         height: auto; } }

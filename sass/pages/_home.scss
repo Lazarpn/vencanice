@@ -15,9 +15,7 @@
   // Features subsection
   &__features {
     grid-row: 2/3;
-    grid-column: 1/2;
-    padding: 15px;
-    padding-bottom: 30px;
+    grid-column: 1/-1;
     width: 100%;
     height: 100%;
     display: grid;
@@ -48,6 +46,8 @@
 
 // Home gallery
 .home-gallery {
+  margin-top: 50px;
+
   grid-row: slider-start/slider-end;
   grid-column: full-start/full-end;
 
@@ -60,7 +60,7 @@
     margin-top: 1.5rem;
     width: 100%;
     height: 100%;
-    padding: 0 4rem;
+    padding: 0 12rem;
 
     @include respond(tab-land) {
       padding: 0 2rem;
@@ -70,8 +70,8 @@
       width: 100%;
       height: 100%;
       display: grid;
-      column-gap: 100px;
-      grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+      column-gap: 50px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
     }
 
     @include respond(tab-land) {
