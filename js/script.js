@@ -12,6 +12,7 @@ const menuOpen = document.querySelector('.hamburger-menu');
 const menuClose = document.querySelector('.close-menu');
 const decisionBtn = document.querySelector('.decision__content__btn');
 const features = document.getElementById('features');
+const headerLogo = document.querySelector('.header__logo');
 // Modal images
 const modal = document.querySelector('.modal');
 const modalImages = document.querySelectorAll('.modal-image');
@@ -64,8 +65,14 @@ if (btnSliderLeft && btnSliderRight) {
 
 const addStickyHeader = function (entries) {
   const [entry] = entries;
-  if (!entry.isIntersecting) navigation.classList.add('sticky');
-  if (entry.isIntersecting) navigation.classList.remove('sticky');
+  if (!entry.isIntersecting) {
+    navigation.classList.add('sticky');
+    headerLogo.setAttribute('src', '/images/logo-2.webp');
+  }
+  if (entry.isIntersecting) {
+    navigation.classList.remove('sticky');
+    headerLogo.setAttribute('src', '/images/logo.webp');
+  }
 };
 const options = {
   root: null,

@@ -2,14 +2,15 @@
 
 .navigation {
   padding: 0 20px;
-  background-color: var(--color-grey);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
   width: 100%;
-  border-bottom: 1px solid var(--color-gold);
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 85px;
-  z-index: 100;
 
   @include respond(big-desktop) {
     height: 85px;
@@ -41,13 +42,16 @@
   &__link:link,
   &__link:visited {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    font-size: 1.3rem;
+    // color: rgb(0, 0, 0);
+    color: #fff;
     cursor: pointer;
   }
 
   &__link:active,
   &__link:hover {
-    color: rgb(88, 88, 88);
+    // color: rgb(88, 88, 88);
+    color: var(--color-gold);
     cursor: pointer;
   }
 
@@ -76,7 +80,7 @@
     display: flex;
     align-items: center;
     height: 100%;
-    border-left: 1px solid var(--color-gold);
+    // border-left: 1px solid var(--color-gold);
 
     @include respond(phone) {
       display: none;
@@ -94,21 +98,39 @@
   &__icon {
     height: 100%;
     width: 100%;
-    fill: var(--color-gold);
+    // fill: var(--color-gold);
+    fill: #fff;
     cursor: pointer;
     transition: all 0.2s;
   }
   &__icon:hover {
-    fill: var(--color-gold-dark);
+    fill: var(--color-gold);
     transform: translateY(-1px);
   }
 }
 
 .sticky {
-  z-index: 50;
+  z-index: 100;
   position: fixed;
+  background-color: var(--color-grey);
+  border-bottom: 1px solid var(--color-gold);
   top: 0;
   left: 0;
+}
+
+.sticky .navigation__link {
+  color: #000;
+}
+.sticky .navigation__icon {
+  fill: var(--color-gold);
+}
+
+.sticky .navigation__icon:hover {
+  fill: var(--color-gold-dark);
+}
+
+.sticky .hamburger-menu {
+  fill: #000;
 }
 
 // HAMBURGER MENU
@@ -120,6 +142,7 @@
   cursor: pointer;
 }
 .hamburger-menu {
+  fill: #fff;
   @include respond(tab-port) {
     display: inline;
   }
@@ -139,7 +162,7 @@
   height: 30px;
 }
 
-// RESPONSIVE MENU
+// RESPONSIVE
 .responsive-menu {
   width: 100%;
   height: 110%;
