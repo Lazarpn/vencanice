@@ -379,7 +379,8 @@ body {
     grid-column: 1 / -1;
     margin-bottom: 2rem; }
   .gallery__heading {
-    color: var(--color-gold); }
+    color: var(--color-gold);
+    text-align: center; }
   .gallery__img {
     display: block;
     cursor: pointer;
