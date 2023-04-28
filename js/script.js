@@ -98,6 +98,9 @@ if (menuOpen) {
   menuOpen.addEventListener('click', function (e) {
     menu.classList.remove('hidden');
   });
+  document.addEventListener('slide', function (e) {
+    menu.classList.remove('hidden');
+  });
 }
 
 if (menuClose) {
@@ -127,6 +130,9 @@ if (modalClose) {
 }
 
 if (modal) {
+  document.addEventListener('slide', function (e) {
+    modal.classList.add('hidden');
+  });
   modal.addEventListener('click', function (e) {
     if (!e.target.classList.contains('modal__img')) {
       modal.classList.add('hidden');
