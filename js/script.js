@@ -99,6 +99,8 @@ if (menuOpen) {
     menu.classList.remove('hidden');
   });
   document.addEventListener('slide', function (e) {
+    e.preventDefault();
+
     menu.classList.remove('hidden');
   });
 }
@@ -131,6 +133,7 @@ if (modalClose) {
 
 if (modal) {
   document.addEventListener('slide', function (e) {
+    e.preventDefault();
     modal.classList.add('hidden');
   });
   modal.addEventListener('click', function (e) {
