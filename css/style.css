@@ -86,7 +86,8 @@ body {
 
 .heading__1 {
   font-size: 55px;
-  font-weight: 400; }
+  font-weight: 400;
+  font-family: 'Tillana', cursive; }
   @media only screen and (max-width: 600px) {
     .heading__1 {
       font-size: 40px; } }
@@ -96,7 +97,8 @@ body {
 
 .heading__2 {
   font-size: 30px;
-  font-weight: 500; }
+  font-weight: 500;
+  font-family: 'Tillana', cursive; }
   @media only screen and (max-width: 600px) {
     .heading__2 {
       font-size: 27px; } }
@@ -106,7 +108,8 @@ body {
 
 .heading__3 {
   font-size: 20px;
-  font-weight: 400; }
+  font-weight: 400;
+  font-family: 'Tillana', cursive; }
   @media only screen and (max-width: 600px) {
     .heading__3 {
       font-size: 20px; } }
@@ -116,7 +119,8 @@ body {
 
 .heading__4 {
   font-size: 15px;
-  font-weight: 400; }
+  font-weight: 400;
+  font-family: 'Tillana', cursive; }
 
 /*
 0-600px Phone
