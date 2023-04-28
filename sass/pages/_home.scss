@@ -72,6 +72,7 @@
       display: grid;
       column-gap: 50px;
       grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+      row-gap: 2rem;
     }
 
     @include respond(tab-land) {
@@ -84,16 +85,38 @@
 
 .gallery-image-box {
   height: 100%;
+  position: relative;
   transition: all 0.2s;
 
   &__image {
     width: 100%;
-    transition: all 0.2s;
+    transition: all 0.4s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
-
   &__image:hover {
     filter: brightness(0.75);
     cursor: pointer;
+  }
+
+  &__link:link,
+  &__link:visited {
+    position: absolute;
+    z-index: 5;
+    text-decoration: none;
+    background-color: var(--color-gold);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: #fff;
+    font-size: 1.3rem;
+    bottom: 10%;
+    right: 10%;
+    padding: 0.5rem 2rem;
+    border-radius: 60px;
+    transition: all 0.2s;
+  }
+
+  &__link:hover,
+  &__link:active {
+    background-color: var(--color-gold-dark);
   }
 }
 
@@ -269,7 +292,7 @@
   display: flex;
   flex-direction: column;
 
-  background-color: var(--color-grey);
+  // background-color: var(--color-grey);
   grid-row: banner-start / banner-end;
   grid-column: full-start / full-end;
   display: flex;

@@ -176,20 +176,38 @@ body {
       height: 100%;
       display: grid;
       column-gap: 50px;
-      grid-template-columns: repeat(auto-fit, minmax(300px, max-content)); }
+      grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+      row-gap: 2rem; }
     @media only screen and (max-width: 1200px) {
       .home-gallery__gallery__content {
         column-gap: 50px; } }
 
 .gallery-image-box {
   height: 100%;
+  position: relative;
   transition: all 0.2s; }
   .gallery-image-box__image {
     width: 100%;
-    transition: all 0.2s; }
+    transition: all 0.4s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
   .gallery-image-box__image:hover {
     filter: brightness(0.75);
     cursor: pointer; }
+  .gallery-image-box__link:link, .gallery-image-box__link:visited {
+    position: absolute;
+    z-index: 5;
+    text-decoration: none;
+    background-color: var(--color-gold);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: #fff;
+    font-size: 1.3rem;
+    bottom: 10%;
+    right: 10%;
+    padding: 0.5rem 2rem;
+    border-radius: 60px;
+    transition: all 0.2s; }
+  .gallery-image-box__link:hover, .gallery-image-box__link:active {
+    background-color: var(--color-gold-dark); }
 
 .feature {
   display: flex;
@@ -311,7 +329,6 @@ body {
 .banner {
   display: flex;
   flex-direction: column;
-  background-color: var(--color-grey);
   grid-row: banner-start / banner-end;
   grid-column: full-start / full-end;
   display: flex;
@@ -431,6 +448,7 @@ body {
 1800 - Big desktop
 */
 .about {
+  padding-top: 3rem;
   grid-row: main-start / main-end;
   grid-column: full-start/full-end;
   display: flex;
@@ -984,7 +1002,7 @@ body {
   --color-white: #fff;
   --color-grey: #f9f7f6;
   --color-gold: #f5ccb9;
-  --color-gold-dark: #ad732c; }
+  --color-gold-dark: #e9ac90; }
 
 /*
 0-600px Phone

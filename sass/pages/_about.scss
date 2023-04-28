@@ -1,6 +1,7 @@
 @import '../abstracts/mixins';
 
 .about {
+  padding-top: 3rem;
   grid-row: main-start / main-end;
   grid-column: full-start/full-end;
   display: flex;
