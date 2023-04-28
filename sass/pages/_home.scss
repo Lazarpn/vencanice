@@ -278,7 +278,7 @@
     }
 
     &__heading {
-      color: #c69963;
+      color: var(--color-gold-dark);
     }
 
     &__btn {
@@ -314,10 +314,12 @@
     text-decoration: none;
     color: var(--color-gold);
     border-bottom: 2px solid var(--color-gold);
+    transition: all 0.2s;
   }
 
   &__link:hover,
   &__link:active {
+    color: var(--color-gold-dark);
     cursor: pointer;
   }
 }

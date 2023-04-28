@@ -323,7 +323,7 @@ body {
         .decision__content__text {
           font-size: 22px; } }
     .decision__content__heading {
-      color: #c69963; }
+      color: var(--color-gold-dark); }
     .decision__content__btn {
       all: unset;
       width: 150px;
@@ -347,8 +347,10 @@ body {
   .banner__link:link, .banner__link:visited {
     text-decoration: none;
     color: var(--color-gold);
-    border-bottom: 2px solid var(--color-gold); }
+    border-bottom: 2px solid var(--color-gold);
+    transition: all 0.2s; }
   .banner__link:hover, .banner__link:active {
+    color: var(--color-gold-dark);
     cursor: pointer; }
 
 .gallery {
@@ -364,13 +366,14 @@ body {
       display: flex;
       flex-direction: column; } }
   .gallery__banner {
-    background-color: var(--color-grey);
+    padding: 0 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     grid-row: banner-start/banner-end;
-    grid-column: 1 / -1; }
+    grid-column: 1 / -1;
+    margin-bottom: 2rem; }
   .gallery__heading {
     color: var(--color-gold); }
   .gallery__img {
@@ -789,6 +792,7 @@ body {
   .header__heading {
     position: absolute;
     text-transform: uppercase;
+    text-align: center;
     color: var(--color-white);
     top: 50%;
     left: 50%;
@@ -962,7 +966,7 @@ body {
   display: none; }
 
 .active-link {
-  color: var(--color-gold); }
+  color: var(--color-gold) !important; }
 
 .footer {
   grid-row: footer-start/footer-end;

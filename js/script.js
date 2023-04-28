@@ -26,6 +26,9 @@ const emailInput = document.getElementById('email');
 const phoneNumberInput = document.getElementById('phone');
 const messageInput = document.getElementById('message');
 const btnSend = document.getElementById('buttonSend');
+// ACTIVE LINK LOGIC
+const navigationList = document.querySelector('.navigation__list');
+const linkList = document.querySelectorAll('.navigation__link');
 
 let curSlide = 0;
 
@@ -184,5 +187,23 @@ if (btnSend) {
     // console.log(name, surname, email, phoneNumber, message);
 
     sendData(name, surname, email, phoneNumber, message);
+  });
+}
+
+// CURRENT ACTIVE LINK LOGIC
+
+if (navigationList) {
+  navigationList.addEventListener('click', function (e) {
+    if (e.target.classList.contains('navigation__link')) {
+      localStorage.setItem('activeLinkId', e.target.getAttribute('id'));
+      e.target.classList.add('active-link');
+    }
+  });
+}
+
+if (localStorage.getItem('activeLinkId')) {
+  window.addEventListener('load', function () {
+    const link = document.getElementById(localStorage.getItem('activeLinkId'));
+    link.classList.add('active-link');
   });
 }
