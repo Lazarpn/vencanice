@@ -333,6 +333,7 @@ body {
 .banner {
   display: flex;
   flex-direction: column;
+  padding: 0 2rem;
   grid-row: banner-start / banner-end;
   grid-column: full-start / full-end;
   display: flex;
@@ -959,6 +960,9 @@ body {
 
 .hidden {
   display: none; }
+
+.active-link {
+  color: var(--color-gold); }
 
 .footer {
   grid-row: footer-start/footer-end;
