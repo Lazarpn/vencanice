@@ -97,23 +97,32 @@ if (decisionBtn) {
 
 // RESPONSIVE NAVIGATION
 
+const openModal = function () {
+  menu.classList.remove('hidden');
+  history.pushState({ modalOpen: true }, '');
+};
+
+const closeModal = function () {
+  menu.classList.add('hidden');
+};
+
 if (menuOpen) {
   menuOpen.addEventListener('click', function (e) {
-    menu.classList.remove('hidden');
-  });
-
-  window.addEventListener('popstate', e => {
-    // Check if the current history state is null or not
-    if (e.state === null) {
-      // If it is null, it means the back button was pressed
-      menu.classList.add('hidden');
-    }
+    openModal();
   });
 }
 
+window.addEventListener('popstate', e => {
+  // Check if the current history state is null or not
+  if (history.state && history.state.modalOpen) {
+    // If it is null, it means the back button was pressed
+    closeModal();
+  }
+});
+
 if (menuClose) {
   menuClose.addEventListener('click', function (e) {
-    menu.classList.add('hidden');
+    closeModal();
   });
 }
 
