@@ -114,7 +114,7 @@ if (menuOpen) {
 
 window.addEventListener('popstate', e => {
   // Check if the current history state is null or not
-  if (history.state && history.state.modalOpen) {
+  if (menuClose) {
     // If it is null, it means the back button was pressed
     closeModal();
   }
