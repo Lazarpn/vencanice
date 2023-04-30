@@ -928,8 +928,8 @@ body {
 
 .close-menu {
   position: absolute;
-  top: 5%;
-  right: 5%;
+  top: 3%;
+  right: 5.5%;
   cursor: pointer;
   width: 30px;
   height: 30px; }
