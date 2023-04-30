@@ -133,6 +133,10 @@ if (inputs) {
     input.addEventListener('focus', e => {
       labels.forEach(label => label.classList.remove('hidden'));
     });
+
+    input.addEventListener('blur', e => {
+      labels.forEach(label => label.classList.add('hidden'));
+    });
   });
 }
 
