@@ -168,40 +168,65 @@
       <div class="contact__content">
         <form action="" class="contact__content__form form" id="appointments">
           <div class="form__box form__box--names">
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Ime:"
-              required
-            />
-            <input
-              type="text"
-              name="surname"
-              id="surname"
-              placeholder="Prezime:"
-              required
-            />
+            <div class="input-box">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="input"
+                placeholder="Ime:"
+                required
+              />
+              <label class="label hidden" for="name">Ime</label>
+            </div>
+            <div class="input-box">
+              <input
+                type="text"
+                name="surname"
+                class="input"
+                id="surname"
+                placeholder="Prezime:"
+                required
+              />
+              <label class="label hidden" for="surname">Prezime</label>
+            </div>
           </div>
           <div class="form__box form__box--email">
-            <input type="email" name="email" id="email" placeholder="Email:" />
+            <div class="input-box">
+              <input
+                type="email"
+                name="email"
+                class="input"
+                id="email"
+                placeholder="Email:"
+              />
+              <label class="label hidden" for="email">Email</label>
+            </div>
           </div>
           <div class="form__box form__box--email">
-            <input
-              type="phone"
-              name="phone"
-              id="phone"
-              placeholder="Telefon:"
-              required
-            />
+            <div class="input-box">
+              <input
+                type="phone"
+                name="phone"
+                class="input"
+                id="phone"
+                placeholder="Telefon:"
+                required
+              />
+              <label class="label hidden" for="phone">Telefon</label>
+            </div>
           </div>
           <div class="form__box form__box--message">
-            <textarea
-              name="message"
-              id="message"
-              placeholder="Poruka:"
-              required
-            ></textarea>
+            <div class="input-box">
+              <textarea
+                name="message"
+                id="message"
+                class="input"
+                placeholder="Poruka:"
+                required
+              ></textarea>
+              <label class="label hidden" for="message">Poruka</label>
+            </div>
           </div>
           <button class="form__btn btn-primary" id="buttonSend" type="submit">
             Pošalji

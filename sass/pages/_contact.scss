@@ -66,9 +66,11 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
+
       input {
         height: 40px;
         width: 100%;
+        position: relative;
 
         @include respond(phone) {
           height: 30px;

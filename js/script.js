@@ -29,6 +29,9 @@ const btnSend = document.getElementById('buttonSend');
 // ACTIVE LINK LOGIC
 const navigationList = document.querySelector('.navigation__list');
 const linkList = document.querySelectorAll('.navigation__link');
+// LABELS
+const labels = document.querySelectorAll('.label');
+const inputs = document.querySelectorAll('.input');
 
 let curSlide = 0;
 
@@ -93,8 +96,6 @@ if (decisionBtn) {
   });
 }
 
-//
-
 // RESPONSIVE NAVIGATION
 
 const openModal = function () {
@@ -123,6 +124,15 @@ window.addEventListener('popstate', e => {
 if (menuClose) {
   menuClose.addEventListener('click', function (e) {
     closeModal();
+  });
+}
+
+// LABEL LOGIC
+if (inputs) {
+  inputs.forEach(input => {
+    input.addEventListener('focus', e => {
+      labels.forEach(label => label.classList.remove('hidden'));
+    });
   });
 }
 
