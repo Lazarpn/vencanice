@@ -101,10 +101,13 @@ if (menuOpen) {
   menuOpen.addEventListener('click', function (e) {
     menu.classList.remove('hidden');
   });
-  document.addEventListener('slide', function (e) {
-    e.preventDefault();
 
-    menu.classList.remove('hidden');
+  window.addEventListener('popstate', e => {
+    // Check if the current history state is null or not
+    if (e.state === null) {
+      // If it is null, it means the back button was pressed
+      menu.classList.add('hidden');
+    }
   });
 }
 
