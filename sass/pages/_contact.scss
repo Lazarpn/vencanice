@@ -61,6 +61,14 @@
     margin-top: 30px;
   }
 
+  input:invalid + label {
+    color: var(--color-red);
+  }
+
+  label {
+    color: var(--color-green);
+  }
+
   &__box {
     &--names {
       display: flex;
@@ -206,3 +214,5 @@
     }
   }
 }
+
+// VALID/INVALID INPUT

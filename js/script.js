@@ -128,14 +128,15 @@ if (menuClose) {
 }
 
 // LABEL LOGIC
+
 if (inputs) {
   inputs.forEach(input => {
     input.addEventListener('focus', e => {
-      labels.forEach(label => label.classList.remove('hidden'));
+      input.nextElementSibling.classList.remove('hidden');
     });
 
     input.addEventListener('blur', e => {
-      labels.forEach(label => label.classList.add('hidden'));
+      input.nextElementSibling.classList.add('hidden');
     });
   });
 }
