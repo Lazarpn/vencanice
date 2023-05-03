@@ -100,18 +100,18 @@ if (decisionBtn) {
 
 // RESPONSIVE NAVIGATION
 
-const openModal = function () {
+const openMenu = function () {
   menu.classList.remove('hidden');
-  history.pushState({ modalOpen: true }, '');
+  history.pushState({ menuOpen: true }, '');
 };
 
-const closeModal = function () {
+const closeMenu = function () {
   menu.classList.add('hidden');
 };
 
 if (menuOpen) {
   menuOpen.addEventListener('click', function (e) {
-    openModal();
+    openMenu();
   });
 }
 
@@ -119,13 +119,13 @@ window.addEventListener('popstate', e => {
   // Check if the current history state is null or not
   if (menuClose) {
     // If it is null, it means the back button was pressed
-    closeModal();
+    closeMenu();
   }
 });
 
 if (menuClose) {
   menuClose.addEventListener('click', function (e) {
-    closeModal();
+    closeMenu();
   });
 }
 
@@ -147,19 +147,34 @@ if (inputs) {
 
 let imgSrc;
 
+window.addEventListener('popstate', e => {
+  if (modalClose) {
+    closeModal();
+  }
+});
+
+const openModal = function (e) {
+  imgSrc = e.target.getAttribute('src');
+  modalImage.setAttribute('src', imgSrc);
+  modal.classList.remove('hidden');
+  history.pushState({ modalOpen: true }, '');
+};
+
+const closeModal = function () {
+  modal.classList.add('hidden');
+};
+
 if (modalImages) {
   modalImages.forEach(img => {
     img.addEventListener('click', function (e) {
-      imgSrc = e.target.getAttribute('src');
-      modal.classList.remove('hidden');
-      modalImage.setAttribute('src', imgSrc);
+      openModal(e);
     });
   });
 }
 
 if (modalClose) {
   modalClose.addEventListener('click', function (e) {
-    modal.classList.add('hidden');
+    closeModal();
   });
 }
 
