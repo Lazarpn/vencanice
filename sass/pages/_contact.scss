@@ -32,10 +32,11 @@
   }
 
   &__map {
-    height: 45%;
+    // height: 65%;
+    height: 30rem;
 
     @include respond(big-desktop) {
-      height: 40%;
+      height: 40rem;
     }
 
     @include respond(tab-port) {
@@ -53,8 +54,16 @@
   display: flex;
   flex-direction: column;
 
+  & > * {
+    overflow: hidden;
+  }
+
   @include respond(tab-port) {
-    padding: 20px;
+    padding: 10px;
+    padding-top: 20px;
+  }
+
+  @include respond(phone) {
   }
 
   & > * {
@@ -65,10 +74,16 @@
     &--names {
       display: flex;
       justify-content: space-between;
+      gap: 5rem;
       width: 100%;
+
+      @include respond(tab-port) {
+      }
+
       input {
-        height: 40px;
+        height: 35px;
         width: 100%;
+        position: relative;
 
         @include respond(phone) {
           height: 30px;
@@ -76,8 +91,6 @@
         }
 
         &:first-child {
-          margin-right: 40px;
-
           @include respond(phone) {
             margin-right: 20px;
           }
@@ -202,5 +215,54 @@
     &__link {
       border-bottom: 1px solid var(--color-gold);
     }
+  }
+}
+
+// VALID/INVALID INPUT
+
+.input-box {
+  width: 100%;
+
+  input,
+  textarea {
+    outline: none;
+    border: none;
+    transition: all 0.3s;
+    background-color: var(--color-grey);
+  }
+
+  input:focus:invalid {
+    border-bottom: 3px solid rgb(255, 136, 38);
+  }
+
+  input:focus:not(:invalid) {
+    border-bottom: 3px solid rgb(132, 235, 118);
+  }
+
+  input:focus::-webkit-input-placeholder {
+    opacity: 0;
+  }
+  textarea:focus::-webkit-input-placeholder {
+    opacity: 0;
+  }
+  label {
+    position: absolute;
+    color: #979797;
+    // transition: all 2s ease-out;
+    animation-name: slide-from-top;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes slide-from-top {
+  0% {
+    transform: translateY(-100%);
+    // top: 50%;
+  }
+  100% {
+    // top: 50%;
+    transform: translateY(0);
   }
 }

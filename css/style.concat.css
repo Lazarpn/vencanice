@@ -641,10 +641,10 @@ body {
         .contact__content__informations {
           align-items: center; } }
   .contact__map {
-    height: 45%; }
+    height: 30rem; }
     @media only screen and (min-width: 1800px) {
       .contact__map {
-        height: 40%; } }
+        height: 40rem; } }
     @media only screen and (max-width: 900px) {
       .contact__map {
         margin-top: 30px; } }
@@ -656,27 +656,30 @@ body {
   padding: 20px 70px;
   display: flex;
   flex-direction: column; }
+  .form > * {
+    overflow: hidden; }
   @media only screen and (max-width: 900px) {
     .form {
-      padding: 20px; } }
+      padding: 10px;
+      padding-top: 20px; } }
   .form > * {
     margin-top: 30px; }
   .form__box--names {
     display: flex;
     justify-content: space-between;
+    gap: 5rem;
     width: 100%; }
     .form__box--names input {
-      height: 40px;
-      width: 100%; }
+      height: 35px;
+      width: 100%;
+      position: relative; }
       @media only screen and (max-width: 600px) {
         .form__box--names input {
           height: 30px;
           width: 100%; } }
-      .form__box--names input:first-child {
-        margin-right: 40px; }
-        @media only screen and (max-width: 600px) {
-          .form__box--names input:first-child {
-            margin-right: 20px; } }
+      @media only screen and (max-width: 600px) {
+        .form__box--names input:first-child {
+          margin-right: 20px; } }
   .form__box--email {
     display: flex; }
     .form__box--email input {
@@ -766,6 +769,36 @@ body {
   @media only screen and (max-width: 900px) {
     .info__link {
       border-bottom: 1px solid var(--color-gold); } }
+
+.input-box {
+  width: 100%; }
+  .input-box input,
+  .input-box textarea {
+    outline: none;
+    border: none;
+    transition: all 0.3s;
+    background-color: var(--color-grey); }
+  .input-box input:focus:invalid {
+    border-bottom: 3px solid #ff8826; }
+  .input-box input:focus:not(:invalid) {
+    border-bottom: 3px solid #84eb76; }
+  .input-box input:focus::-webkit-input-placeholder {
+    opacity: 0; }
+  .input-box textarea:focus::-webkit-input-placeholder {
+    opacity: 0; }
+  .input-box label {
+    position: absolute;
+    color: #979797;
+    animation-name: slide-from-top;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards; }
+
+@keyframes slide-from-top {
+  0% {
+    transform: translateY(-100%); }
+  100% {
+    transform: translateY(0); } }
 
 /*
 0-600px Phone
@@ -1019,6 +1052,8 @@ body {
 :root {
   --color-white: #fff;
   --color-grey: #f9f7f6;
+  --color-red: #ba2424;
+  --color-green: #16e516;
   --color-gold: #f5ccb9;
   --color-gold-dark: #e9ac90; }
 

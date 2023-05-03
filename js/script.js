@@ -13,6 +13,8 @@ const menuClose = document.querySelector('.close-menu');
 const decisionBtn = document.querySelector('.decision__content__btn');
 const features = document.getElementById('features');
 const headerLogo = document.querySelector('.header__logo');
+const footerLogo = document.querySelector('.footer__logo');
+
 // Modal images
 const modal = document.querySelector('.modal');
 const modalImages = document.querySelectorAll('.modal-image');
@@ -29,6 +31,9 @@ const btnSend = document.getElementById('buttonSend');
 // ACTIVE LINK LOGIC
 const navigationList = document.querySelector('.navigation__list');
 const linkList = document.querySelectorAll('.navigation__link');
+// LABELS
+const labels = document.querySelectorAll('.label');
+const inputs = document.querySelectorAll('.input');
 
 let curSlide = 0;
 
@@ -93,22 +98,20 @@ if (decisionBtn) {
   });
 }
 
-//
-
 // RESPONSIVE NAVIGATION
 
-const openModal = function () {
+const openMenu = function () {
   menu.classList.remove('hidden');
-  history.pushState({ modalOpen: true }, '');
+  history.pushState({ menuOpen: true }, '');
 };
 
-const closeModal = function () {
+const closeMenu = function () {
   menu.classList.add('hidden');
 };
 
 if (menuOpen) {
   menuOpen.addEventListener('click', function (e) {
-    openModal();
+    openMenu();
   });
 }
 
@@ -116,13 +119,27 @@ window.addEventListener('popstate', e => {
   // Check if the current history state is null or not
   if (menuClose) {
     // If it is null, it means the back button was pressed
-    closeModal();
+    closeMenu();
   }
 });
 
 if (menuClose) {
   menuClose.addEventListener('click', function (e) {
-    closeModal();
+    closeMenu();
+  });
+}
+
+// LABEL LOGIC
+
+if (inputs) {
+  inputs.forEach(input => {
+    input.addEventListener('focus', e => {
+      input.nextElementSibling.classList.remove('hidden');
+    });
+
+    input.addEventListener('blur', e => {
+      input.nextElementSibling.classList.add('hidden');
+    });
   });
 }
 
@@ -130,19 +147,34 @@ if (menuClose) {
 
 let imgSrc;
 
+window.addEventListener('popstate', e => {
+  if (modalClose) {
+    closeModal();
+  }
+});
+
+const openModal = function (e) {
+  imgSrc = e.target.getAttribute('src');
+  modalImage.setAttribute('src', imgSrc);
+  modal.classList.remove('hidden');
+  history.pushState({ modalOpen: true }, '');
+};
+
+const closeModal = function () {
+  modal.classList.add('hidden');
+};
+
 if (modalImages) {
   modalImages.forEach(img => {
     img.addEventListener('click', function (e) {
-      imgSrc = e.target.getAttribute('src');
-      modal.classList.remove('hidden');
-      modalImage.setAttribute('src', imgSrc);
+      openModal(e);
     });
   });
 }
 
 if (modalClose) {
   modalClose.addEventListener('click', function (e) {
-    modal.classList.add('hidden');
+    closeModal();
   });
 }
 
@@ -203,6 +235,11 @@ if (btnSend) {
 }
 
 // CURRENT ACTIVE LINK LOGIC
+
+headerLogo.addEventListener('click', function (e) {
+  localStorage.setItem('activeLinkId', 'pocetna');
+  document.getElementById('pocetna').classList.add('active-link');
+});
 
 if (navigationList) {
   navigationList.addEventListener('click', function (e) {
