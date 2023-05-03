@@ -774,12 +774,27 @@ body {
     outline: none;
     border: none;
     background-color: var(--color-grey); }
-  .input-box input:invalid {
+  .input-box input:focus:invalid {
     border-bottom: 3px solid #ff8826; }
-  .input-box input:focus {
-    border-bottom: 3px solid #92e992; }
+  .input-box input:focus:not(:invalid) {
+    border-bottom: 3px solid #84eb76; }
+  .input-box input:focus::-webkit-input-placeholder {
+    opacity: 0; }
+  .input-box textarea:focus::-webkit-input-placeholder {
+    opacity: 0; }
   .input-box label {
-    position: absolute; }
+    position: absolute;
+    color: #979797;
+    animation-name: slide-from-top;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards; }
+
+@keyframes slide-from-top {
+  0% {
+    transform: translateY(-100%); }
+  100% {
+    transform: translateY(0); } }
 
 /*
 0-600px Phone

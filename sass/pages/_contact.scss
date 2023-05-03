@@ -219,15 +219,38 @@
     background-color: var(--color-grey);
   }
 
-  input:invalid {
+  input:focus:invalid {
     border-bottom: 3px solid rgb(255, 136, 38);
   }
 
-  input:focus {
-    border-bottom: 3px solid rgb(146, 233, 146);
+  input:focus:not(:invalid) {
+    border-bottom: 3px solid rgb(132, 235, 118);
   }
 
+  input:focus::-webkit-input-placeholder {
+    opacity: 0;
+  }
+  textarea:focus::-webkit-input-placeholder {
+    opacity: 0;
+  }
   label {
     position: absolute;
+    color: #979797;
+    // transition: all 2s ease-out;
+    animation-name: slide-from-top;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes slide-from-top {
+  0% {
+    transform: translateY(-100%);
+    // top: 50%;
+  }
+  100% {
+    // top: 50%;
+    transform: translateY(0);
   }
 }
