@@ -641,10 +641,10 @@ body {
         .contact__content__informations {
           align-items: center; } }
   .contact__map {
-    height: 45%; }
+    height: 30rem; }
     @media only screen and (min-width: 1800px) {
       .contact__map {
-        height: 40%; } }
+        height: 40rem; } }
     @media only screen and (max-width: 900px) {
       .contact__map {
         margin-top: 30px; } }
@@ -661,27 +661,22 @@ body {
       padding: 20px; } }
   .form > * {
     margin-top: 30px; }
-  .form input:invalid + label {
-    color: var(--color-red); }
-  .form label {
-    color: var(--color-green); }
   .form__box--names {
     display: flex;
     justify-content: space-between;
+    gap: 5rem;
     width: 100%; }
     .form__box--names input {
-      height: 40px;
+      height: 35px;
       width: 100%;
       position: relative; }
       @media only screen and (max-width: 600px) {
         .form__box--names input {
           height: 30px;
           width: 100%; } }
-      .form__box--names input:first-child {
-        margin-right: 40px; }
-        @media only screen and (max-width: 600px) {
-          .form__box--names input:first-child {
-            margin-right: 20px; } }
+      @media only screen and (max-width: 600px) {
+        .form__box--names input:first-child {
+          margin-right: 20px; } }
   .form__box--email {
     display: flex; }
     .form__box--email input {
@@ -771,6 +766,20 @@ body {
   @media only screen and (max-width: 900px) {
     .info__link {
       border-bottom: 1px solid var(--color-gold); } }
+
+.input-box {
+  width: 100%; }
+  .input-box input,
+  .input-box textarea {
+    outline: none;
+    border: none;
+    background-color: var(--color-grey); }
+  .input-box input:invalid {
+    border-bottom: 3px solid #ff8826; }
+  .input-box input:focus {
+    border-bottom: 3px solid #92e992; }
+  .input-box label {
+    position: absolute; }
 
 /*
 0-600px Phone

@@ -13,6 +13,8 @@ const menuClose = document.querySelector('.close-menu');
 const decisionBtn = document.querySelector('.decision__content__btn');
 const features = document.getElementById('features');
 const headerLogo = document.querySelector('.header__logo');
+const footerLogo = document.querySelector('.footer__logo');
+
 // Modal images
 const modal = document.querySelector('.modal');
 const modalImages = document.querySelectorAll('.modal-image');
@@ -218,6 +220,11 @@ if (btnSend) {
 }
 
 // CURRENT ACTIVE LINK LOGIC
+
+headerLogo.addEventListener('click', function (e) {
+  localStorage.setItem('activeLinkId', 'pocetna');
+  document.getElementById('pocetna').classList.add('active-link');
+});
 
 if (navigationList) {
   navigationList.addEventListener('click', function (e) {

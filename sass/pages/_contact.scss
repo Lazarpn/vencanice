@@ -32,10 +32,11 @@
   }
 
   &__map {
-    height: 45%;
+    // height: 65%;
+    height: 30rem;
 
     @include respond(big-desktop) {
-      height: 40%;
+      height: 40rem;
     }
 
     @include respond(tab-port) {
@@ -61,22 +62,15 @@
     margin-top: 30px;
   }
 
-  input:invalid + label {
-    color: var(--color-red);
-  }
-
-  label {
-    color: var(--color-green);
-  }
-
   &__box {
     &--names {
       display: flex;
       justify-content: space-between;
+      gap: 5rem;
       width: 100%;
 
       input {
-        height: 40px;
+        height: 35px;
         width: 100%;
         position: relative;
 
@@ -86,8 +80,6 @@
         }
 
         &:first-child {
-          margin-right: 40px;
-
           @include respond(phone) {
             margin-right: 20px;
           }
@@ -216,3 +208,26 @@
 }
 
 // VALID/INVALID INPUT
+
+.input-box {
+  width: 100%;
+
+  input,
+  textarea {
+    outline: none;
+    border: none;
+    background-color: var(--color-grey);
+  }
+
+  input:invalid {
+    border-bottom: 3px solid rgb(255, 136, 38);
+  }
+
+  input:focus {
+    border-bottom: 3px solid rgb(146, 233, 146);
+  }
+
+  label {
+    position: absolute;
+  }
+}
