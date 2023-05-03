@@ -656,9 +656,12 @@ body {
   padding: 20px 70px;
   display: flex;
   flex-direction: column; }
+  .form > * {
+    overflow: hidden; }
   @media only screen and (max-width: 900px) {
     .form {
-      padding: 20px; } }
+      padding: 10px;
+      padding-top: 20px; } }
   .form > * {
     margin-top: 30px; }
   .form__box--names {
@@ -773,6 +776,7 @@ body {
   .input-box textarea {
     outline: none;
     border: none;
+    transition: all 0.3s;
     background-color: var(--color-grey); }
   .input-box input:focus:invalid {
     border-bottom: 3px solid #ff8826; }

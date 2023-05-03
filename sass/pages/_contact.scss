@@ -54,8 +54,16 @@
   display: flex;
   flex-direction: column;
 
+  & > * {
+    overflow: hidden;
+  }
+
   @include respond(tab-port) {
-    padding: 20px;
+    padding: 10px;
+    padding-top: 20px;
+  }
+
+  @include respond(phone) {
   }
 
   & > * {
@@ -68,6 +76,9 @@
       justify-content: space-between;
       gap: 5rem;
       width: 100%;
+
+      @include respond(tab-port) {
+      }
 
       input {
         height: 35px;
@@ -216,6 +227,7 @@
   textarea {
     outline: none;
     border: none;
+    transition: all 0.3s;
     background-color: var(--color-grey);
   }
 
