@@ -894,7 +894,8 @@ body {
     display: block;
     height: 2px;
     width: 100%;
-    background-color: var(--color-gold); }
+    background-color: var(--color-gold);
+    animation: link-slide-up-animation 0.2s; }
   .navigation__logo {
     width: 200px; }
     @media only screen and (max-width: 600px) {
@@ -1026,6 +1027,12 @@ body {
     transform: translateX(0%); }
   100% {
     transform: translateX(100%); } }
+
+@keyframes link-slide-up-animation {
+  0% {
+    transform: translateY(300%); }
+  100% {
+    transform: translateY(0%); } }
 
 .footer {
   grid-row: footer-start/footer-end;

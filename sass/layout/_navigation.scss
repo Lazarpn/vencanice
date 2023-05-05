@@ -61,6 +61,7 @@
     height: 2px;
     width: 100%;
     background-color: var(--color-gold);
+    animation: link-slide-up-animation 0.2s;
   }
 
   // Logo style
@@ -253,5 +254,14 @@
   }
   100% {
     transform: translateX(100%);
+  }
+}
+
+@keyframes link-slide-up-animation {
+  0% {
+    transform: translateY(300%);
+  }
+  100% {
+    transform: translateY(0%);
   }
 }
