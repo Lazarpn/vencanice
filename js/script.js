@@ -101,12 +101,12 @@ if (decisionBtn) {
 // RESPONSIVE NAVIGATION
 
 const openMenu = function () {
-  menu.classList.remove('hidden');
+  menu.classList.remove('menu-hidden');
   history.pushState({ menuOpen: true }, '');
 };
 
 const closeMenu = function () {
-  menu.classList.add('hidden');
+  menu.classList.add('menu-hidden');
 };
 
 if (menuOpen) {
