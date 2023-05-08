@@ -200,7 +200,7 @@ const sendData = function (name, surname, email, phone, message) {
       surname: surname,
       email: email,
       phone: phone,
-      message: message,
+      messageContent: message,
     }),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
