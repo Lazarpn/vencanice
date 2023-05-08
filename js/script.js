@@ -193,7 +193,7 @@ if (modal) {
 // Contact form
 
 const sendData = function (name, surname, email, phone, message) {
-  fetch(`https://gorgo-lux-default-rtdb.firebaseio.com/message.json`, {
+  fetch(`https://weddingapi-gorgolux.azurewebsites.net/Wedding/message`, {
     method: 'POST',
     body: JSON.stringify({
       name: name,
@@ -206,6 +206,7 @@ const sendData = function (name, surname, email, phone, message) {
       'Content-type': 'application/json; charset=UTF-8',
     },
   }).then(function (response) {
+    console.log(response);
     nameInput.value = '';
     surnameInput.value = '';
     phoneNumberInput.value = '';
@@ -223,12 +224,19 @@ if (btnSend) {
     const email = emailInput.value;
     const phoneNumber = phoneNumberInput.value;
     const message = messageInput.value;
+    console.log(name, surname, email, phoneNumber, message);
 
-    // if (name === '' || surname === '' || phoneNumber === '' || message || '') {
-    //   return;
-    // }
-
-    // console.log(name, surname, email, phoneNumber, message);
+    if (
+      name === '' ||
+      surname === '' ||
+      phoneNumber === '' ||
+      message === '' ||
+      email === ''
+    ) {
+      // btnSend.setAttribute('disabled', 'true');
+      alert('Molimo vas da popunite sve podatke');
+      return;
+    }
 
     sendData(name, surname, email, phoneNumber, message);
   });
